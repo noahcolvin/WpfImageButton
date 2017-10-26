@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CustomControls.Annotations;
+using FontAwesome.WPF;
 
 namespace CustomControls
 {
@@ -44,23 +48,67 @@ namespace CustomControls
     ///     <MyNamespace:SuperButton/>
     ///
     /// </summary>
-    public class SuperButton : Button
+    public class SuperButton : Button, INotifyPropertyChanged
     {
-        public static readonly DependencyProperty IconBackgroundColorProperty = DependencyProperty.Register("IconBackgroundColor", typeof(Brush), typeof(SuperButton));
+        public static readonly DependencyProperty ButtonBackgroundProperty = DependencyProperty.Register("ButtonBackground", typeof(Brush), typeof(SuperButton));
+        public static readonly DependencyProperty IconProperty = DependencyProperty.Register("Icon", typeof(FontAwesomeIcon), typeof(SuperButton));
 
-        public Brush IconBackgroundColor
+        public Brush ButtonBackground
         {
-            get => (Brush)GetValue(IconBackgroundColorProperty);
+            get => (Brush)GetValue(ButtonBackgroundProperty);
             set
             {
-                SetValue(IconBackgroundColorProperty, value);
-                //OnPropertyChanged(nameof(IconBackgroundColor));
+                SetValue(ButtonBackgroundProperty, value);
+                OnPropertyChanged(nameof(ButtonBackground));
+            }
+        }
+
+        public FontAwesomeIcon Icon
+        {
+            get => (FontAwesomeIcon)GetValue(IconProperty);
+            set
+            {
+                SetValue(IconProperty, value);
+                OnPropertyChanged(nameof(Icon));
+            }
+        }
+
+        public Color IconBackgroundColor
+        {
+            set
+            {
+                var brush = new LinearGradientBrush
+                {
+                    StartPoint = new Point(0, 0),
+                    EndPoint = new Point(1, 0)
+                };
+                brush.GradientStops.Add(new GradientStop(value, 0));
+                brush.GradientStops.Add(new GradientStop(value, .3));
+                brush.GradientStops.Add(new GradientStop(Colors.WhiteSmoke, .3));
+                brush.GradientStops.Add(new GradientStop(Colors.WhiteSmoke, 1));
+
+                ButtonBackground = brush;
             }
         }
 
         static SuperButton()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(SuperButton), new FrameworkPropertyMetadata(typeof(SuperButton)));
+
+            //MouseEnter += OnMouseEnter;
+        }
+
+        private void OnMouseEnter(object sender, MouseEventArgs mouseEventArgs)
+        {
+            Icon = FontAwesomeIcon.AddressBook;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
