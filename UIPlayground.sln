@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UIPlayground", "UIPlayground\UIPlayground.csproj", "{DAC6048D-8D42-4A39-9FD2-B208DF334C1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControls", "CustomControls\CustomControls.csproj", "{A8B7E892-6C5E-43D7-9023-492515D75956}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAC6048D-8D42-4A39-9FD2-B208DF334C1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAC6048D-8D42-4A39-9FD2-B208DF334C1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAC6048D-8D42-4A39-9FD2-B208DF334C1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAC6048D-8D42-4A39-9FD2-B208DF334C1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8B7E892-6C5E-43D7-9023-492515D75956}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8B7E892-6C5E-43D7-9023-492515D75956}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8B7E892-6C5E-43D7-9023-492515D75956}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8B7E892-6C5E-43D7-9023-492515D75956}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CDAE7206-8A26-4AF3-8E8A-C28CF69050F2}
+	EndGlobalSection
+EndGlobal

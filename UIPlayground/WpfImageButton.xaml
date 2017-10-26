@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="UIPlayground.WpfImageButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UIPlayground"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="300">
+    <!--<UserControl.DataContext>
+        <StaticResource ResourceKey="{Binding IconBackgroundColor}" />
+    </UserControl.DataContext>-->
+    <UserControl.Resources>
+        <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                        <GradientStop Color="Blue" Offset="0"/>
+                        <GradientStop Color="Blue" Offset="0.3"/>
+                        <GradientStop Color="WhiteSmoke" Offset="0.3"/>
+                        <GradientStop Color="WhiteSmoke" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10" Background="{TemplateBinding Background}" BorderBrush="DarkGray" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Button HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Style="{StaticResource RoundedButtonStyle}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*"></ColumnDefinition>
+                    <ColumnDefinition Width="70*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Image Source="gear.png" Margin="5 5 5 5" />
+
+                <!--<Rectangle ClipToBounds="True" Fill="Aquamarine" Style="{StaticResource LeftRoundedStyle}">
+                </Rectangle>-->
+
+                <!--<Grid Background="Blue" Grid.Column="0">
+                    <Image Source="gear.png" Margin="5 5 5 5" Style="{StaticResource LeftRoundedStyle}"/>
+                </Grid>-->
+
+                <TextBlock Text="Button Text is here and is really really long" LineStackingStrategy="MaxHeight" MaxHeight="80" FontSize="24" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5 5 5 5" TextWrapping="WrapWithOverflow" Grid.Column="1" />
+            </Grid>
+        </Button>
+    </Grid>
+</UserControl>
