@@ -9,23 +9,54 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border CornerRadius="10" Background="{Binding Path=ButtonBackground, RelativeSource={RelativeSource TemplatedParent}}" BorderBrush="DarkGray" BorderThickness="1">
+                    <Border CornerRadius="10" 
+                            Background="{Binding Path=ButtonBackground, RelativeSource={RelativeSource TemplatedParent}}"
+                            BorderBrush="DarkGray"
+                            BorderThickness="1"
+                            Margin="5 5 5 5">
+                        <Border.OpacityMask>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black" Offset="0"/>
+                                <GradientStop Color="White" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Border.OpacityMask>
                         <Grid>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="30*"></ColumnDefinition>
                                 <ColumnDefinition Width="70*"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
 
-                            <fa:FontAwesome
-                                Icon="{Binding Path=Icon, RelativeSource={RelativeSource TemplatedParent}}"
-                                FontSize="64"
-                                VerticalAlignment="Center" Margin="5 5 5 5" />
+                            <Viewbox Stretch="Uniform">
+                                <fa:FontAwesome
+                                    Icon="{Binding Path=Icon, RelativeSource={RelativeSource TemplatedParent}}"
+                                    FontSize="64"
+                                    VerticalAlignment="Center" Margin="10 10 10 10" />
+                            </Viewbox>
 
-                            <TextBlock Text="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" LineStackingStrategy="MaxHeight" MaxHeight="80" FontSize="24" TextTrimming="CharacterEllipsis" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5 5 5 5" TextWrapping="WrapWithOverflow" Grid.Column="1" />
+                            <TextBlock Text="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}" 
+                                       LineStackingStrategy="MaxHeight"
+                                       MaxHeight="80"
+                                       FontSize="24"
+                                       TextTrimming="CharacterEllipsis" 
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       Margin="5 5 5 5"
+                                       TextWrapping="WrapWithOverflow"
+                                       Grid.Column="1" >
+                            </TextBlock>
                         </Grid>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Effect">
+                    <Setter.Value>
+                        <DropShadowEffect ShadowDepth="1" Color="Blue" Opacity="1" BlurRadius="10"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
     </Style>
 </ResourceDictionary>

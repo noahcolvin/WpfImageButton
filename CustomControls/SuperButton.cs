@@ -91,6 +91,8 @@ namespace CustomControls
             }
         }
 
+        public Color MyColor => Colors.Orange;
+
         static SuperButton()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(SuperButton), new FrameworkPropertyMetadata(typeof(SuperButton)));

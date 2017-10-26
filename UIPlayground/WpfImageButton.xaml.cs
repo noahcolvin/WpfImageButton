@@ -23,6 +23,8 @@ namespace UIPlayground
             }
         }
 
+        public Color MyColor => Colors.Orange;
+
         public WpfImageButton()
         {
             InitializeComponent();

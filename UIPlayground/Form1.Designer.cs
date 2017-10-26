@@ -50,9 +50,7 @@ namespace UIPlayground
             // 
             // elementHost1
             // 
-            this.elementHost1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.elementHost1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.elementHost1.Location = new System.Drawing.Point(12, 12);
             this.elementHost1.Name = "elementHost1";
             this.elementHost1.Size = new System.Drawing.Size(269, 94);
@@ -62,9 +60,7 @@ namespace UIPlayground
             // 
             // elementHost2
             // 
-            this.elementHost2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.elementHost2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.elementHost2.Location = new System.Drawing.Point(12, 112);
             this.elementHost2.Name = "elementHost2";
             this.elementHost2.Size = new System.Drawing.Size(269, 94);
@@ -74,9 +70,7 @@ namespace UIPlayground
             // 
             // elementHost3
             // 
-            this.elementHost3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.elementHost3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.elementHost3.Location = new System.Drawing.Point(12, 212);
             this.elementHost3.Name = "elementHost3";
             this.elementHost3.Size = new System.Drawing.Size(269, 94);
@@ -86,9 +80,7 @@ namespace UIPlayground
             // 
             // elementHost4
             // 
-            this.elementHost4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.elementHost4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.elementHost4.Location = new System.Drawing.Point(12, 312);
             this.elementHost4.Name = "elementHost4";
             this.elementHost4.Size = new System.Drawing.Size(269, 94);
@@ -98,9 +90,7 @@ namespace UIPlayground
             // 
             // elementHost5
             // 
-            this.elementHost5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.elementHost5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.elementHost5.Location = new System.Drawing.Point(289, 12);
             this.elementHost5.Name = "elementHost5";
             this.elementHost5.Size = new System.Drawing.Size(269, 94);
@@ -110,9 +100,7 @@ namespace UIPlayground
             // 
             // elementHost6
             // 
-            this.elementHost6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.elementHost6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.elementHost6.Location = new System.Drawing.Point(289, 112);
             this.elementHost6.Name = "elementHost6";
             this.elementHost6.Size = new System.Drawing.Size(269, 94);
@@ -122,9 +110,7 @@ namespace UIPlayground
             // 
             // elementHost7
             // 
-            this.elementHost7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.elementHost7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.elementHost7.Location = new System.Drawing.Point(289, 212);
             this.elementHost7.Name = "elementHost7";
             this.elementHost7.Size = new System.Drawing.Size(269, 94);
@@ -134,9 +120,7 @@ namespace UIPlayground
             // 
             // elementHost8
             // 
-            this.elementHost8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.elementHost8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.elementHost8.Location = new System.Drawing.Point(289, 312);
             this.elementHost8.Name = "elementHost8";
             this.elementHost8.Size = new System.Drawing.Size(269, 94);
